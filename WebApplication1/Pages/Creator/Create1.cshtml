@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication1.Pages.Creator.Create1Model
+@{
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="creator.firstName" class="control=label"></label>
+                <input asp-for="creator.firstName" class="form-control" />
+                <span asp-validation-for="creator.firstName" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>

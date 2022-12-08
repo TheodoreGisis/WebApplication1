@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplication1.Pages.Creator.DetailsModel
+@{
+    ViewData["Title"] = "Creator Details";
+}
+
+<h1>Creator with name: @Model.creator.firstName  and lastnname:@Model.creator.lastName</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CREATORID</th>
+            <th>DESCRIPTION</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>COLLECTED</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.creators)
+        {
+            <tr>
+                <td>@movie.CreatorId</td>
+                <td>@movie.description</td>
+                <td>@movie.title</td>
+                <td>@movie.price</td>
+                <td>@movie.moneyCollected</td>
+               
+                
+                
+                
+            </tr>
+        }
+    </tbody>
+</table>

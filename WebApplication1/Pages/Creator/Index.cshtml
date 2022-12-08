@@ -1,0 +1,36 @@
+﻿@page
+@model WebApplication1.Pages.Creator.IndexModel
+@{
+    ViewData["Title"] = "Creator";
+}
+<h1>Creator</h1>
+<a class="btn btn-primary" asp-page="Create">NEW</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th>EMAIL</th>
+            <th>SHOW PROJECTS</th>
+        </tr>
+    </thead>
+
+    <tbody>
+  
+        
+    @foreach(var creator in Model.creators)
+    {
+             
+
+	    <tr>
+         <td>@creator.firstName</td>
+         <td>@creator.lastName</td>
+         <td>@creator.email</td>
+         <td><a asp-page="Details" asp-route-Id="@creator.Id">Show</a></td>
+        
+        </tr>
+    }
+    </tbody>
+ </table>

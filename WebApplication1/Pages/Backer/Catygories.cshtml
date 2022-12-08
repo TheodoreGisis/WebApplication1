@@ -1,0 +1,51 @@
+﻿@page
+@model WebApplication1.Pages.Backer.CatygoriesModel
+@{
+}
+
+<h1>Create Creator</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Category_name.CategoryName" class="control=label"></label>
+                <input asp-for="Category_name.CategoryName" class="form-control" />
+                <span asp-validation-for="Category_name.CategoryName" class="text-danger"></span>
+            </div>
+ 
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+  
+                    <th>DESCRIPTION</th>
+                    <th>TITLE</th>
+                    <th>PRICE</th>
+                    <th>COLLECTED</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.ProjectByCatygory)
+                {
+                    <tr>
+   
+                        <td>@movie.description</td>
+                        <td>@movie.title</td>
+                        <td>@movie.price</td>
+                        <td>@movie.moneyCollected</td>
+                  </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

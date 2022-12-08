@@ -1,0 +1,73 @@
+﻿@page
+@model WebApplication1.Pages.Creator.CreateModel
+@{
+    ViewData["Title"] = "Create Creator";
+}
+
+<h1>Create Creator</h1>
+<h4>There are currently @Model.CreatorCount actors stored.</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="creator.firstName" class="control=label"></label>
+                <input asp-for="creator.firstName" class="form-control" />
+                <span asp-validation-for="creator.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="creator.lastName" class="control=label"></label>
+                <input asp-for="creator.lastName" class="form-control" />
+                <span asp-validation-for="creator.lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="creator.email" class="control=label"></label>
+                <input asp-for="creator.email" class="form-control" />
+                <span asp-validation-for="creator.email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="creator.password" class="control=label"></label>
+                <input asp-for="creator.password" class="form-control" />
+                <span asp-validation-for="creator.password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="project.title" class="control=label"></label>
+                <input asp-for="project.title" class="form-control" />
+                <span asp-validation-for="project.title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="project.description" class="control=label"></label>
+                <input asp-for="project.description" class="form-control" />
+                <span asp-validation-for="project.description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="project.price" class="control=label"></label>
+                <input asp-for="project.price" class="form-control" />
+                <span asp-validation-for="project.price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="category.CategoryName" class="control=label"></label>
+                <input asp-for="category.CategoryName" class="form-control" />
+                <span asp-validation-for="category.CategoryName" class=" text-danger"></span>
+            </div>
+ 
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="Index">ALL CREATORS</a>
+</div>
+
+
+
+

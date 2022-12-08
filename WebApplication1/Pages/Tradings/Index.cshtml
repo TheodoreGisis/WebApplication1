@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplication1.Pages.Tradings.IndexModel
+@{
+    ViewData["Title"] = "Trading Projects";
+}
+
+<h1>TRADING PROJECTS</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+            
+            <th>PRICE</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.TradingProject)
+        {
+            <tr>
+                <td>@movie.title</td>
+                <td>@movie.description</td>
+                <td>@movie.price</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
